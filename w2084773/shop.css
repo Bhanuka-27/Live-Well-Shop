@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.roww{
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scroll if content overflows */ /* Ensure the row takes up the full width */
+    align-items: center;
+    margin-left: 2.5%;
+    margin-right: 1%;
+}
+
+.topic h1 {
+    
+    margin: 0;
+    font-size: 1.5em;
+}
+.topic {
+    color: white;
+        flex-grow: 1;
+        text-align: center;
+}
+.container-fluid{
+    width:100%;
+    align-items: center;
+    margin-top:auto;    
+}
+
+.col-lg-6 {
+    flex: left; /* Set column width to auto */
+    width: 50%; /* Each column takes 25% of the container width */
+    padding: 15px; /* Adjust spacing between columns */
+    box-sizing: border-box; 
+    display: inline;
+    /* Include padding in column width */
+}
+
+.right-first-image {
+    position: relative;
+    width: auto;
+    height: auto;
+    
+     /* Set position relative for proper absolute positioning */
+}
+
+.thumb {
+    position: relative; /* Set position relative for proper absolute positioning */
+    overflow: hidden;
+    width:100%;
+    text-align: center; 
+    border-radius: 3%;  /* Hide overflow if the image size exceeds container */
+}
+
+.thumb .image {
+    width: 100%; /* Make sure the image fills its container */
+    aspect-ratio: 1/1; /* Maintain aspect ratio */
+}
+
+.inner-content {
+    position: absolute;
+    height:100%;
+    top:-6.5%;
+    color: cadetblue;
+    width: 100%;
+}
+
+.catergory_name{
+    color:black;
+    font-size: 120%;
+    font-weight: 700;
+    margin-top: 80%;
+    padding:6% 10%;
+    background-color: rgba(255, 255, 255, 0.9);  
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    transform: translateY(0);    
+}
+.thumb .hover-content {
+    position: absolute;
+    width:100%;
+    bottom:-100%;
+    text-align: center;
+     /* Transparent white background */
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth movement and opacity */
+    transform: translateY(100%);
+}
+
+.thumb:hover .hover-content {
+    visibility: visible;
+    bottom:15%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.thumb:hover .inner-content{
+    transform: translateY(-88%);
+    transition: transform 0.3s ease;
+    color: #422800;
+    
+    margin-top:20%;
+}
+/* CSS */
+.button-text, .button-text1{
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 100%;
+  padding: 0  20%;
+  line-height: 270%;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-text:hover {
+  background-color: #fff;
+  
+}
+
+.button-text:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+@media only screen and (max-width:100%){
+    body{
+        font-size: 120%;
+    }
+}
+
+@media only screen and (max-width:1309px){
+    body{
+        font-size:75%;
+    }
+}
+  .back{
+    width:100%;
+    margin-top: 9%;;
+    align-items: center;
+        
+
+  }
+  .backImg{
+    margin-left: 7%;
+    
+    width: 25%;
+    margin-top: -31%;
+    
+  }
+  .topic{
+    text-align: right;
+    margin-right: 7%;
+    font-size:2000%;
+    margin-top: 1%;
+    
+  }
+  
+#backImg{
+    margin-bottom:-8%;
+  }
+
+main {
+    padding: 2em;
+    background-image: url(background.jpg);
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the image fixed in place */
+    background-position: center; /* Center the image */
+    backface-visibility: calc();
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto 1em;
+}
+
+.product h3 {
+    margin: 0.5em 0;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product span {
+    font-weight: bold;
+    display: block;
+    margin: 0.5em 0;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+#order-summary {
+    margin-top: 2em;
+    border-top: 1px solid #ddd;
+    padding-top: 2em;
+}
+
+#cart-items {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cart-item img {
+    max-width: 50px;
+    margin-right: 1em;
+}
+
+.cart-item div {
+    flex-grow: 1;
+}
+
+.total-amount {
+    font-weight: bold;
+    margin-top: 1em;
+    text-align: right;
+}
+
+#checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+#checkout {
+    display: none;
+    margin-top: 2em;
+    border-top: 1px solid #ddd;
+    padding-top: 2em;
+}
+
+#checkout-form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#checkout-form input, #checkout-form textarea {
+    width: calc(100% - 2em);
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#checkout-form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#checkout-form legend {
+    font-weight: bold;
+}
+
+#checkout-form label input {
+    margin-right: 0.5em;
+}
+
+#checkout-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.confirmation-message {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4CAF50;
+    color: white;
+}

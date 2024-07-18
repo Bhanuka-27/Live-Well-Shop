@@ -1,0 +1,197 @@
+/* General Styling */
+body {
+    background-image: url(Full\ back.jpg); /* Update the path to your image */
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the image fixed in place */
+    background-position: center; /* Center the image */
+    backface-visibility: calc();
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topic {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.topic h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Header and Logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #688142;
+    color: white;
+}
+
+.logo img {
+    height: 80px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-item a:hover {
+    background-color: #575757;
+}
+
+.nav-item.active a {
+    background-color: #1d5a1c;
+}
+
+/* Mission Section */
+.mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust height as needed */
+    margin: 20px;
+}
+
+.mission-box {
+    background-image: url(Best\ Wellness\ Background\ Wallpaper.jpg); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.mission-box h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.mission-box p {
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+/* Links Section */
+.links {
+    padding: 20px;
+    text-align: center;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: #59b457;
+    font-weight: bold;
+}
+
+/* Content Cards Section */
+.content-cards {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-cards .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-cards .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(30% - 30px); /* Adjust width as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(255, 255, 255); /* Text color over background image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.content-cards .card h3 {
+    margin-top: 0;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.content-cards .card p {
+    color: inherit; /* Ensure text color inherits from parent */
+}
+
+.content-cards .card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.content-cards .card a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Specific Card Background Images */
+.card1 {
+    background-image: url(Benefits\ of\ good\ health.jpg); /* Path to your background image 1 */
+}
+
+.card2 {
+    background-image: url(Healthy\ diet\ and\ nutrition.jpg); /* Path to your background image 2 */
+}
+
+.card3 {
+    background-image: url(Importance\ of\ exercise.jpg); /* Path to your background image 3 */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #688142;
+    color: white;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #00ff4007;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+        }
+        .logo {   
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 200%;
+            
+        }
+        .splash {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .loader {
+            position: absolute;
+            bottom: 20px;
+            align-items: center;
+            transform: translateX(-50%);
+            border: 16px solid #000000;
+            border-radius: 50%;
+            border-top: 16px solid #00000096;
+            width: 120px;
+            height: 120px;
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .team {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .member {
+            margin: 0 10px;
+            text-align: center;
+        }
+        .member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background2.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            opacity: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    
+    <div class="logo">
+        <img src="GoodHealth.png" alt="Your Logo" width="100">
+    </div>
+
+    <div class="splash">
+        <h1>Live well</h1>
+        <p>"Our mission is to Ensure healthy lives and promote well-being for all at all ages."</p>
+        <div class="team">
+            <div class="member">
+                <img src="Chamath.jpg" alt="Chamath">
+                <p>Chamath</p>
+            </div>
+            <div class="member">
+                <img src="Female1.jpg" alt="Ridmi">
+                <p>Ridmi</p>
+            </div>
+            <div class="member">
+                <img src="Male1.jpg" alt="Bhanuka">
+                <p>Bhanuka</p>
+            </div>
+        </div>
+    </div>
+    <div class="loader"></div>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.logo').style.opacity = 1;
+        }, 3000);
+        
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 4000);
+    </script>
+</body>
+</html>
